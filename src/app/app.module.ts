@@ -11,6 +11,7 @@ import { BannerComponent } from './banner/banner.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     StaticpagesModule,
     AdminModule,
     AuthModule,
+    HttpClientModule,
     AppRoutingModule,
   ],
   providers: [],
