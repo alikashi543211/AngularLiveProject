@@ -8,12 +8,12 @@ import {Employee} from './employee';
   providedIn: 'root'
 })
 export class EmployeeService {
-    url = 'http://angular_live_project_api.test'
+    url = 'http://angular_live_project_api.test/'
     constructor(private http:HttpClient)
     {
 
     }
     createemployee(employee:Employee):Observable<Employee>{
-        return this.http.post<Employee>(this.url + 'api/employee_master/store', employee);
+        return this.http.post<Employee>(this.url + 'api/employeeMaster/employeeMasterStore', employee);
     }
 }
