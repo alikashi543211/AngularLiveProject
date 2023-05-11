@@ -6,10 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+    session:any;
+    constructor() { }
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+    ngOnInit(): void {
+        this.session = localStorage.getItem('Employee');
+    }
 
 }
