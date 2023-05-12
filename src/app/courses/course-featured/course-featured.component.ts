@@ -1,3 +1,4 @@
+import { CoursesService } from './../courses.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CourseFeaturedComponent implements OnInit {
 
-  constructor() { }
+    coursePostListing:any;
+    constructor(private _courseService:CoursesService) { }
 
-  ngOnInit(): void {
-  }
+    ngOnInit(): void {
+        this.loadCoursePostListing()
+    }
+
+    loadCoursePostListing()
+    {
+        this._courseService.getCoursePostListing().subscribe(res => {
+            this.coursePostListing = res.data;
+            // console.log(this.coursePostListing);
+        })
+    }
 
 }

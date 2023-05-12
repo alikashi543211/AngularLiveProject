@@ -89,6 +89,7 @@ export class PostComponent implements OnInit {
                 this.regForm.reset();
                 this.datasaved = true;
                 this.message = "Post Created";
+                this.fileToUpload = null;
 
             });
         }else{
@@ -100,6 +101,7 @@ export class PostComponent implements OnInit {
                 this.datasaved = true;
                 this.message = "Post Updated";
                 this.PostIdToUpdate = null;
+                this.fileToUpload = null;
 
             });
         }
