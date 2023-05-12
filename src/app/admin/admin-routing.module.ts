@@ -5,7 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
     {path: 'dashboard', component:DashboardComponent},
-    {path: 'post', component:PostComponent}
+    {path: 'post', component:PostComponent},
 ];
 
 @NgModule({

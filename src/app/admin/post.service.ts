@@ -13,4 +13,28 @@ export class PostService {
     getPosts():Observable<any>{
         return this.http.post<Post[]>(this.url + '/api/coursePost/coursePostListing', null);
     }
+
+    createPost(formData:FormData)
+    {
+        const endpoint = this.url + '/api/coursePost/coursePostStore';
+        return this.http.post(endpoint, formData);
+    }
+
+    editPost(formData : FormData):Observable<any>
+    {
+        const endpoint = this.url + '/api/coursePost/coursePostDetail';
+        return this.http.post(endpoint, formData);
+    }
+
+    updatePost(formData : FormData):Observable<any>
+    {
+        const endpoint = this.url + '/api/coursePost/coursePostUpdate';
+        return this.http.post(endpoint, formData);
+    }
+
+    deletePost(formData : FormData):Observable<any>
+    {
+        const endpoint = this.url + '/api/coursePost/coursePostDelete';
+        return this.http.post(endpoint, formData);
+    }
 }

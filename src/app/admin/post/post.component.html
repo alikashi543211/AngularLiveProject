@@ -6,10 +6,10 @@
                       <div class="dash-left">
                           <ul>
                               <li class="active"><a routerLink="/dashboard" routerLinkActive="active" class="nav-link">Dashboard</a></li>
-                              <a routerLink="/Post" routerLinkActive="active" class="nav-link" >Posts</a>
-                              <li><a href="#">Courses</a></li>
-                              <li><a href="#">Pages</a></li>
-                              <li><a href="#">Logout</a></li>
+                              <li class="active"><a routerLink="/Post" routerLinkActive="active" class="nav-link active" >Posts</a></li>
+                              <li><a class="nav-link" href="#">Courses</a></li>
+                              <li><a class="nav-link" href="#">Pages</a></li>
+                              <li><a class="nav-link" href="#">Logout</a></li>
                           </ul>
                       </div>
                   </div>
@@ -120,8 +120,8 @@
                                 <td>{{post.title}}</td>
                                 <td>{{post.entered_date | date: 'mediumDate'}}</td>
                                 <td class="">
-                                    <a [routerLink]="['/admin/post/edit', post.id]" class="btn btn-warning bg-warning text-dark m-2">Edit</a>
-                                    <a (click)="onDelete(post.Id)" class="btn btn-danger bg-danger text-white">Delete</a>
+                                    <a href="javascript:void(0);" (click)="onEdit(post.id)" class="btn btn-warning bg-warning text-dark m-2">Edit</a>
+                                    <a (click)="onDelete(post.id)" class="btn btn-danger bg-danger text-white">Delete</a>
                                 </td>
                             </tr>
                           </table>
